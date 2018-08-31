@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Unity," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="##关于我热衷于游戏开发的普通高中生~讨厌争辩，喜欢钻研新事物的…怪孩子。如果你与我爱好相同，欢迎一起讨论！ E-mail :yuanshuai2003@outlook.comQQ:1051424005">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="思路：首先获取玩家的位置，然后创建一个Vector3来保存偏移在start中，通过自身的位置减去玩家的位置来计算出来偏移并赋值给vector3在update中，相机的位置=玩家的位置+偏移 public Transform player;private Vector3 offset; start:offset=transform.position-player.position;update:tr">
+<meta name="keywords" content="Unity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity相机跟随简易实现">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/Unity相机跟随简易实现/index.html">
 <meta property="og:site_name" content="ZeroOne-LingYi">
-<meta property="og:description" content="##关于我热衷于游戏开发的普通高中生~讨厌争辩，喜欢钻研新事物的…怪孩子。如果你与我爱好相同，欢迎一起讨论！ E-mail :yuanshuai2003@outlook.comQQ:1051424005">
+<meta property="og:description" content="思路：首先获取玩家的位置，然后创建一个Vector3来保存偏移在start中，通过自身的位置减去玩家的位置来计算出来偏移并赋值给vector3在update中，相机的位置=玩家的位置+偏移 public Transform player;private Vector3 offset; start:offset=transform.position-player.position;update:tr">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-14T22:43:24.212Z">
+<meta property="og:updated_time" content="2018-08-31T13:11:35.598Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="##关于我热衷于游戏开发的普通高中生~讨厌争辩，喜欢钻研新事物的…怪孩子。如果你与我爱好相同，欢迎一起讨论！ E-mail :yuanshuai2003@outlook.comQQ:1051424005">
+<meta name="twitter:title" content="Unity相机跟随简易实现">
+<meta name="twitter:description" content="思路：首先获取玩家的位置，然后创建一个Vector3来保存偏移在start中，通过自身的位置减去玩家的位置来计算出来偏移并赋值给vector3在update中，相机的位置=玩家的位置+偏移 public Transform player;private Vector3 offset; start:offset=transform.position-player.position;update:tr">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/31/Unity相机跟随简易实现/"/>
 
 
 
 
 
-  <title>about | ZeroOne-LingYi</title>
+  <title>Unity相机跟随简易实现 | ZeroOne-LingYi</title>
   
 
 
@@ -240,35 +241,179 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/Unity相机跟随简易实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LingYi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZeroOne-LingYi">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>##关于我<br>热衷于游戏开发的普通高中生~讨厌争辩，喜欢钻研新事物的…怪孩子。<br>如果你与我爱好相同，欢迎一起讨论！</p>
-<p>E-mail :<a href="mailto:yuanshuai2003@outlook.com" target="_blank" rel="noopener">yuanshuai2003@outlook.com</a><br>QQ:1051424005</p>
-
+          <h1 class="post-title" itemprop="name headline">Unity相机跟随简易实现</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T20:51:16+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>思路：<br>首先获取玩家的位置，然后创建一个Vector3来保存偏移<br>在start中，通过自身的位置减去玩家的位置来计算出来偏移并赋值给vector3<br>在update中，相机的位置=玩家的位置+偏移</p>
+<p>public Transform player;<br>private Vector3 offset;</p>
+<p>start:<br>offset=transform.position-player.position;<br>update:<br>transform.position=offset+player.position;</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感谢投喂ヽ(✿ﾟ▽ﾟ)ノ</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="LingYi 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="LingYi 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Unity/" rel="tag"># Unity</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/31/Unity初识动画系统/" rel="next" title="Unity初识动画系统">
+                <i class="fa fa-chevron-left"></i> Unity初识动画系统
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/31/Unity初识导航系统/" rel="prev" title="Unity初识导航系统">
+                Unity初识导航系统 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 

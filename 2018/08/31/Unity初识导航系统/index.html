@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Unity," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="##关于我热衷于游戏开发的普通高中生~讨厌争辩，喜欢钻研新事物的…怪孩子。如果你与我爱好相同，欢迎一起讨论！ E-mail :yuanshuai2003@outlook.comQQ:1051424005">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="导航网格烘培：window-Navigation-Bake-Bake可以通过缩小Agent Radius来扩大范围若有可穿越的障碍物，可以在物体中将Navigation Static取消勾选若有错误的导航网格生成，可以通过选定该物体的Mesh Renderer，在Navigation中Object中Navigation Area选为 Not Walkable给player添加Nav Mesh Ag">
+<meta name="keywords" content="Unity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity初识导航系统">
+<meta property="og:url" content="http://yoursite.com/2018/08/31/Unity初识导航系统/index.html">
 <meta property="og:site_name" content="ZeroOne-LingYi">
-<meta property="og:description" content="##关于我热衷于游戏开发的普通高中生~讨厌争辩，喜欢钻研新事物的…怪孩子。如果你与我爱好相同，欢迎一起讨论！ E-mail :yuanshuai2003@outlook.comQQ:1051424005">
+<meta property="og:description" content="导航网格烘培：window-Navigation-Bake-Bake可以通过缩小Agent Radius来扩大范围若有可穿越的障碍物，可以在物体中将Navigation Static取消勾选若有错误的导航网格生成，可以通过选定该物体的Mesh Renderer，在Navigation中Object中Navigation Area选为 Not Walkable给player添加Nav Mesh Ag">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-14T22:43:24.212Z">
+<meta property="og:updated_time" content="2018-08-31T13:11:03.509Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="##关于我热衷于游戏开发的普通高中生~讨厌争辩，喜欢钻研新事物的…怪孩子。如果你与我爱好相同，欢迎一起讨论！ E-mail :yuanshuai2003@outlook.comQQ:1051424005">
+<meta name="twitter:title" content="Unity初识导航系统">
+<meta name="twitter:description" content="导航网格烘培：window-Navigation-Bake-Bake可以通过缩小Agent Radius来扩大范围若有可穿越的障碍物，可以在物体中将Navigation Static取消勾选若有错误的导航网格生成，可以通过选定该物体的Mesh Renderer，在Navigation中Object中Navigation Area选为 Not Walkable给player添加Nav Mesh Ag">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/31/Unity初识导航系统/"/>
 
 
 
 
 
-  <title>about | ZeroOne-LingYi</title>
+  <title>Unity初识导航系统 | ZeroOne-LingYi</title>
   
 
 
@@ -240,35 +241,177 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/Unity初识导航系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LingYi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZeroOne-LingYi">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>##关于我<br>热衷于游戏开发的普通高中生~讨厌争辩，喜欢钻研新事物的…怪孩子。<br>如果你与我爱好相同，欢迎一起讨论！</p>
-<p>E-mail :<a href="mailto:yuanshuai2003@outlook.com" target="_blank" rel="noopener">yuanshuai2003@outlook.com</a><br>QQ:1051424005</p>
-
+          <h1 class="post-title" itemprop="name headline">Unity初识导航系统</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T20:52:34+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>导航网格烘培：<br>window-Navigation-Bake-Bake<br>可以通过缩小Agent Radius来扩大范围<br>若有可穿越的障碍物，可以在物体中将Navigation Static取消勾选<br>若有错误的导航网格生成，可以通过选定该物体的Mesh Renderer，在Navigation中Object中Navigation Area选为 Not Walkable<br>给player添加Nav Mesh Agent（导航组件）<br>通过Input.GetMouseButtonDown(0)来获取鼠标左键的按下，返回值为一个布尔值<br>Camera.main.ScreenPointToRay(Input.mousePosition）；在鼠标位置发射一个射线，并返回一个Ray类型的值<br>射线碰撞信息的值的类型为RaycastHit<br>在Physics.Raycast(ray, out hit);返回一个布尔值，来检测是否发生碰撞<br>hit.point可以得到碰撞坐标<br>我们需要获取NavMeshAgent组件来传递最终目的地坐标，但NavMeshAgent组件存在与UnityEngine.AI中，所以应先引用命名空间，然后获取组件（声明为public可以拖拽赋值）<br>NavMshAgent类型下的变量有一个SetDestination();方法，在（）内传递一个坐标，既可作为目的地坐标<br>提高Angular Speed的值可以提高转向速度<br>寻路时的速度可以通过 NavMshAgent类型下的velocity.magnitude来获取</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感谢投喂ヽ(✿ﾟ▽ﾟ)ノ</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="LingYi 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="LingYi 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Unity/" rel="tag"># Unity</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/31/Unity相机跟随简易实现/" rel="next" title="Unity相机跟随简易实现">
+                <i class="fa fa-chevron-left"></i> Unity相机跟随简易实现
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/31/见缝插针案例随手笔记（待整理）/" rel="prev" title="见缝插针案例随手笔记（待整理）">
+                见缝插针案例随手笔记（待整理） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 

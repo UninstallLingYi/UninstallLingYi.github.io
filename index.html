@@ -249,6 +249,620 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/见缝插针案例随手笔记（待整理）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LingYi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZeroOne-LingYi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/31/见缝插针案例随手笔记（待整理）/" itemprop="url">见缝插针案例随手笔记（待整理）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T20:55:05+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>若UI不需要任何操作设计，则可以删除EventSystem<br>将Canvas-RenderCamera设置为WorldSpace即可进行缩放<br>将事件渲染赋值为MainCarema<br>可以将Canvas与Text像素同步，方便调整<br>设置Size等比例缩放更方便<br>在Text中BestFit可自适应大小</p>
+<p>transform.Rotate(//传递一个Vector3);可以使物体进行旋转操作//按照度数旋转，故转速应当是一个Float类型<br>通过GameObject.Instrantiate(//游戏物体,位置,旋转);来实例化物体<br>Vector.MoveTowards(//初始位置,目标位置,速度);来实现简单移动，将会返回一个position<br>Vector3.Distance(当前位置，目标位置)返回一个两位置的距离<br>transform.parent=//游戏物体;可以设置该组件的父位置组件<br>运用OnTriggerEnter2D(Collider2D collision){//代码体}来进行碰撞检测</p>
+<p>Text类型需要using UI，可拖拽赋值。Text名.text= 可以设置显示内容<br>重新加载场景需要引入UnityEngine.SceneManagement; SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);<br>通过StartCoroutine()来调用携程<br>通过IEnumerator name(){}来创建携程，需要通过yield return 0;完成构造</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/Unity初识导航系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LingYi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZeroOne-LingYi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/31/Unity初识导航系统/" itemprop="url">Unity初识导航系统</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T20:52:34+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>导航网格烘培：<br>window-Navigation-Bake-Bake<br>可以通过缩小Agent Radius来扩大范围<br>若有可穿越的障碍物，可以在物体中将Navigation Static取消勾选<br>若有错误的导航网格生成，可以通过选定该物体的Mesh Renderer，在Navigation中Object中Navigation Area选为 Not Walkable<br>给player添加Nav Mesh Agent（导航组件）<br>通过Input.GetMouseButtonDown(0)来获取鼠标左键的按下，返回值为一个布尔值<br>Camera.main.ScreenPointToRay(Input.mousePosition）；在鼠标位置发射一个射线，并返回一个Ray类型的值<br>射线碰撞信息的值的类型为RaycastHit<br>在Physics.Raycast(ray, out hit);返回一个布尔值，来检测是否发生碰撞<br>hit.point可以得到碰撞坐标<br>我们需要获取NavMeshAgent组件来传递最终目的地坐标，但NavMeshAgent组件存在与UnityEngine.AI中，所以应先引用命名空间，然后获取组件（声明为public可以拖拽赋值）<br>NavMshAgent类型下的变量有一个SetDestination();方法，在（）内传递一个坐标，既可作为目的地坐标<br>提高Angular Speed的值可以提高转向速度<br>寻路时的速度可以通过 NavMshAgent类型下的velocity.magnitude来获取</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/Unity相机跟随简易实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LingYi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZeroOne-LingYi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/31/Unity相机跟随简易实现/" itemprop="url">Unity相机跟随简易实现</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T20:51:16+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>思路：<br>首先获取玩家的位置，然后创建一个Vector3来保存偏移<br>在start中，通过自身的位置减去玩家的位置来计算出来偏移并赋值给vector3<br>在update中，相机的位置=玩家的位置+偏移</p>
+<p>public Transform player;<br>private Vector3 offset;</p>
+<p>start:<br>offset=transform.position-player.position;<br>update:<br>transform.position=offset+player.position;</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/Unity初识动画系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LingYi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZeroOne-LingYi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/31/Unity初识动画系统/" itemprop="url">Unity初识动画系统</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T20:50:03+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>动画系统与TimeLine<br>打开动画窗口：window-Animation 来创建普通动画<br>Window-Animator来打开状态机<br>Animation窗<br>samples 60 可在此处设置x帧/秒 ，值越小越慢，值越大越快<br>Add Property 去添加关键帧物体的变化属性（关联组件）<br>在下方右键以Add Key 添加关键帧<br>右上角显示当前所在帧<br>使用录制功能可以免去许多冗杂的操作，直接在理想的时间点修改面板属性，将会直接进行保存//在使用录制功能时，无论如何都要在第0帧进行一次修改操作以保存初始状态<br>在曲线模式中，可以shift并滑轮以仅放大/小纵向<br>在曲线模式中，在关键帧右键以Broken破坏调节直线，Left/Right Tangent 调整 左/右 增减趋势<br>Free以自由调节，Linear以修改为直线<br>单击左上角的动画名，Add—以增加新的动画<br>动画循环：LoopTime勾选<br>UGUI的按钮状态<br>即UI-Button-Transition-Animation改为动画状态，Normal Highlighter（选中） Pressed（按下） Disabled（不可选），一般仅需要一帧动画，Dis一般为浅色，通常按键按下小默认大<br>2D精灵动画<br>得到资源后，若任意几个帧为一个动画，可直接拖入Hierarchy面板<br>人物角色的<br>Unity对于.fbx的支持是最佳的，@命名的一般为动画。在导入3D模型资源时，有大几率发生贴图或材质丢失，如何找回丢失的资源?<br>将角色拖入场景，搜索t：skinned mesh renderer/meshrenderer来查找renderer，Standard为标准，Albedo贴主图颜色为白色，Smothness默认为0（光滑度），Metallic金属色泽 Normal Map贴法图<br>在模型中的Scale Factor 中设置模型的倍数大小，点击Apply应用<br>Rig动画导入方式<br>Animation Type：Legacy少用且较为老旧，不支持状态机。Humanoid仅适用于人形模型 Avatar Definition骨骼相关（从本模型创建或从其他模型copy）//一般在多个模型共有同一骨架时copy，否则默认<br>Root node选择根节点 Optimize Game Objects优化游戏物体//这会导致模型的骨骼节点被隐藏，模型会更加简洁<br>Animations<br>Import Animation加载动画 Clips中Start和End可看出动画的帧数 修改名字后，在1.00处调整速度，可以拖拽黑标来修改，单击+来添加新的动画<br>Loop Time来循环，Loop pose（当匹配较为完美时，这会使动作较为优秀）  完成后单击Apply<br>在状态机中直接拖拽加入动画，第一个被拖入的为默认（可以在右键修改），右键“Make Transition”增加转换条件。HasExitTime为前一个动画结束后自动播放下一个，中间的间隔会使转换更为平滑（差值运算） 单击转换线并单击“-”来删除转换条件<br>在Parameters中添加对条件的限制参数，在转换线中Conditions中添加条件限制 由于参数是存在于状态机的，所以当访问修改参数的时候需要使用GetComponent<animator>（）;来获取组件，并建立相应类型的变量来接受这个组件。接受用户的输入（垂直轴：Vertical），调用变量中的Set方法[SetInteger为int]（要设置的参数,值的大小）;<br>动画的重定向：一个动画给多个模型使用。在Generic中无法实现，但是在Humanoid中可以实现<br>在Humanoid中可通过动画来控制移动，这会使动画和移动的协调性得到大幅提升<br>Configure只有在Apply后才能选定，用于配置Avatar，这会进入模型的骨骼场景，用于调试、更改Avatar映射。<br>Loop match来检测循环动画首尾一致性 Back into pose会使动画不再对该轴的数据产生影响 Based upon来计算原点 Body orientation为角色原点，即身体的正前方 Original是模型师设计的原点 Center of Mess质量的中心 Feet为两脚之间 Offset为偏移<br>在动画重定向时，若骨骼不同，则从自身创建，可以使用其他角色动画/状态机 ，只需要轻微调试。</animator></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/31/常用入门级c-语法速查/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LingYi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZeroOne-LingYi">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/31/常用入门级c-语法速查/" itemprop="url">常用入门级c#语法速查</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T20:39:02+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>数组的声明<br>类型[]数组名={数组值};//数组值可以留空<br>类型[]数组名=new 类型[长度];<br>类型[]数组名=new 类型[长度]{数组值};<br>访问方法<br>数组名[索引];//索引从0开始</p>
+<p>For循环<br>for(int i=1;i&lt;=10;i++){<br>            //循环体<br>         }</p>
+<p>while循环的定义<br>while(bool){<br>//代码体<br>}</p>
+<p>do while循环<br>do{<br>}while();<br>//至少会执行一次</p>
+<p>foreach循环<br>foreach(类型 变量名 in 数组名){<br>    //代码体<br>  }</p>
+<p>枚举类型的定义<br>enum 名称｛<br>//取值，取值<br>｝<br>枚举类型的使用<br>枚举名称 变量名=枚举名称.取值</p>
+<p>方法的定义<br>返回值（void） 方法名称 （参数类型 参数名）｛<br>//代码体<br>return;//返回值<br>｝</p>
+<p>类的定义<br>class 类名：继承类的名称｛<br>//代码体<br>｝<br>类的声明与构造<br>类名 对象=new 类名();<br>只能通过  对象. 来访问public的字段</p>
+<p>switch语句的定义<br>switch(情况变量){<br>case 情况1:{<br>  //代码体<br>  break;<br>  }</p>
+<p> case 情况2:{<br>  //代码体<br>  break;<br>   }<br>default:{<br>  //代码体<br>  break;<br>   }<br> }</p>
+<p>bool运算符：&amp;&amp; and ! 取反 || or</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/15/Unity初识粒子系统/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -535,7 +1149,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -548,7 +1162,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
